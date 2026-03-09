@@ -65,10 +65,10 @@ typedef enum
 #define LED1_GPIO_CLK_ENABLE()                  __HAL_RCC_GPIOA_CLK_ENABLE()
 #define LED1_GPIO_CLK_DISABLE()                 __HAL_RCC_GPIOA_CLK_DISABLE()
 
-#define LEDx_GPIO_CLK_ENABLE(__INDEX__)   do { if((__INDEX__) == 0) {__HAL_RCC_GPIOC_CLK_ENABLE();} else\
-                                                                    {__HAL_RCC_GPIOB_CLK_ENABLE();   }} while(0)
-#define LEDx_GPIO_CLK_DISABLE(__INDEX__)  do { if((__INDEX__) == 0) {__HAL_RCC_GPIOC_CLK_DISABLE();} else\
-                                                                    {__HAL_RCC_GPIOB_CLK_DISABLE();   }} while(0)
+#define LEDx_GPIO_CLK_ENABLE(__INDEX__)   do { if((__INDEX__) == 0) {__HAL_RCC_GPIOA_CLK_ENABLE();} else\
+                                                                    {__HAL_RCC_GPIOB_CLK_ENABLE();   }} while(0) // there is no other led supported currently
+#define LEDx_GPIO_CLK_DISABLE(__INDEX__)  do { if((__INDEX__) == 0) {__HAL_RCC_GPIOA_CLK_DISABLE();} else\
+                                                                    {__HAL_RCC_GPIOB_CLK_DISABLE();   }} while(0) // there is no other led supported currently
 
 /**
   * @}
